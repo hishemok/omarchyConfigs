@@ -2,6 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     #FIX FASTFETCH FIRST
     #fastfetch
+    set -Ux TERMINAL alacritty
+    set -U fish_greeting    
 
     #list
     abbr --add la 'ls -a'
@@ -14,13 +16,14 @@ if status is-interactive
 
     ##Editor
     abbr --add mc micro
+    abbr --add nv nvim
     ##Git
     abbr --add gita --set-cursor 'git add -A && git commit -m "%" && git push'    
     abbr --add lg lazygit
 
     ##Folder 
     abbr --add cdc --set-cursor 'cd ~/.config/%'
-    abbr --add cdr --set-cursor 'cd ~/repos/'
+    abbr --add cdr --set-cursor 'cd ~/repos/%'
 
     ##Search 
     abbr --add fzs --set-cursor 'fzf --query "%"'
